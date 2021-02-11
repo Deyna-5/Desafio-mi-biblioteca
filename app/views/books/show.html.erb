@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="jumbotron text-center">
+  <p>
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
+  <p>
+    <strong>Author:</strong>
+    <%= @book.author %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @book.status %>
-</p>
+  <p>
+    <strong>Status:</strong>
+    <%= @book.status %>
+  </p>
 
-<p>
-  <strong>Borrowed at:</strong>
-  <%= @book.borrowed_at %>
-</p>
+  <p>
+    <strong>Borrowed at:</strong>
+    <%= @book.borrowed_at %>
+  </p>
 
-<p>
-  <strong>Returned at:</strong>
-  <%= @book.returned_at %>
-</p>
+  <p>
+    <strong>Returned at:</strong>
+    <%= @book.returned_at %>
+  </p>
+</div>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<button type="button" class="btn btn-light"><%= link_to 'Edit', edit_book_path(@book) %></button>
+<button type="button" class="btn btn-light"><%= link_to 'Back', books_path %></button>
