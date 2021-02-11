@@ -1,0 +1,32 @@
+
+<div class="jumbotron"> 
+<%= form_with(model: book, local: true) do |f| %>
+
+  <div class="my-4 mx-4">
+    <%= f.text_field :title, placeholder: 'Ingrese el Titulo' %>
+  </div>
+
+  <div class="my-4 mx-4">
+    <%= f.text_field :author, placeholder: 'Ingrese el author del libro' %>
+  </div>
+
+  <div class="my-4 mx-4">
+    <%= f.select :status, Book.statuses.keys , prompt: 'Selecione una opcion...' %>
+  </div>
+
+  <div class="my-4 mx-4">
+    <%= f.label :borrowed_at, 'Seleccione la fecha de prestamo' %><br>
+    <%= f.date_field :borrowed_at %>
+  </div>
+
+  <div class="my-4 mx-4">
+    <%= f.label :returned_at, 'Seleccione la fecha de devolución' %><br>
+    <%= f.date_field :returned_at %>
+  </div>
+
+  <div class="my-4 mx-4">
+    <%= f.submit 'Subir' %>
+  </div>
+
+<% end %>
+</div>
